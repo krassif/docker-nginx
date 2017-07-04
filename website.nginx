@@ -1,0 +1,15 @@
+server {
+        listen                          80;
+
+        root                            /usr/share/node/bin;
+
+        access_log                      /usr/share/node/logs/nginx-site.log;
+        error_log                       /usr/share/node/logs/nginx-site.error.log;
+        gzip on;
+        gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript;
+        location / {
+                try_files $uri $uri/index.html;
+                add_header 'Cache-Control' 'max-age=3600 public';
+                satisfy any;
+        }
+}
