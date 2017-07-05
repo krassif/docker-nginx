@@ -3,7 +3,15 @@
 Allows running static sites within nginx. Map the web content at ```/usr/share/node/var/bin```. For instance:
 
 ```
-docker rm peerbelt-saas; docker run -it -v /Users/Mac/Work/Peerbelt/pb-core-saas-website/dist:/usr/share/node/var/bin -v /Users/Mac/Work/Peerbelt/docker-nginx/logs:/usr/share/node/var/logs -e SITE=pb-core-saas-website -e PORT=80 -p 8888:80 --name "peerbelt-saas" peerbelt/nginx:x86_64
+docker rm peerbelt-saas; \
+	docker run -it \
+		-v /Users/Mac/Work/Peerbelt/pb-core-saas-website/dist:/usr/share/node/var/bin \
+		-v /Users/Mac/Work/Peerbelt/docker-nginx/logs:/usr/share/node/var/logs \
+		-e SITE=pb-core-saas-website \
+		-e PORT=80 \
+		-p 8888:80 \
+		--name "peerbelt-saas" \
+		peerbelt/nginx:x86_64
 ```
 
 You can also map the entire ```var``` assuming it has the following structure:
