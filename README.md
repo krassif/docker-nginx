@@ -29,3 +29,6 @@ var
 ```health``` should contain any healthcheck in addition to the default check connecting to http://<HOST>:<PORT>. The container comes with ```curl```, ```jq```, and ```lsof``` so writing checks is greatly simplified.
 
 ```logs``` is where the ```<SITE>.log``` and ```<SITE>.err.log``` go (should you provide custom ```website.nginx```, the log names may differ - your preference will be taking effect).
+
+---
+NOTICE: The ```x86_64``` tag in the container name. Peerbelt plans to maintain Intel, ```armhf``` ( or ```armv7l```) and ```aarm64``` architectures.
