@@ -1,4 +1,4 @@
-FROM armv7/ubuntu:14.04.3
+FROM armv7/armhf-ubuntu:14.04.3
 MAINTAINER Dimitar Damyanov <dimitar.damyanov@tumba.solutions>
 
 #Install required packages
